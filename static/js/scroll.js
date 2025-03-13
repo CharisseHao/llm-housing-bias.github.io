@@ -1,28 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Smooth scrolling for navigation links
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => {
-      link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = link.getAttribute("href");
-          const targetElement = (targetId === "#") ? document.body : document.querySelector(targetId);
+// scroll.js
+// function setupFadeInObserver() {
+//     const elements = document.querySelectorAll('.fade-in');
 
-          if (targetElement) {
-              targetElement.scrollIntoView({ behavior: "smooth" });
-          }
+//     if ('IntersectionObserver' in window) {
+//         const observer = new IntersectionObserver((entries) => {
+//             entries.forEach(entry => {
+//                 if (entry.isIntersecting) {
+//                     entry.target.classList.add('visible');
+//                 } else {
+//                     entry.target.classList.remove('visible');
+//                 }
+//             });
+//         }, { threshold: 0.1 });
+
+//         elements.forEach(el => observer.observe(el));
+//     }
+// }
+// scroll.js
+
+function setupFadeInObserver() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
       });
-  });
-
-});
-
-$(document).ready(function(){
-    $("#intro .container").load("sections/intro.html");
-    $("#methods .container").load("sections/methods.html");
-    $("#apps .container").load("sections/apps.html");
-    $("#team .container").load("sections/team.html");
-    $("#results .container").load("sections/results.html");
-    $("#references .container").load("sections/references.html");
-
-  });
-
+    }, { threshold: 0.05 });
+    
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  }
   
+  document.addEventListener('DOMContentLoaded', function() {
+    setupFadeInObserver();
+});

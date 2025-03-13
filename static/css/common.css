@@ -1,7 +1,8 @@
 /* common.css */
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Reset and global styles */
 * {
@@ -15,7 +16,12 @@ html, body {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Oxygen', sans-serif;
+  /* font-family: 'Oxygen', sans-serif; */
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  text-align: left;
   gap: 10px;
 }
 img {
@@ -23,19 +29,28 @@ img {
 }
 
 /* Typography */
-h1, h2, h3, h4, p {
+h1 {
   text-align: center;
+  gap: 20px;
+}
+h2, h3, h4, p {
+  text-align: left;
   gap: 10px;
 }
 h1, h2 {
   font-family: 'Oxygen', serif;
   font-weight: 700;
-  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-  1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  /* text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; */
 }
 h3, h4 {
   font-family: 'Oxygen', serif;
   font-weight: 400;
+}
+h5 {
+  font-family: 'Oxygen', serif;
+  font-weight: 200;
+  font-size: 17px; 
+  margin-bottom: 4px; /* Reduce spacing between h5 elements */
 }
 .oxygen-light {
   font-family: "Oxygen", sans-serif;
@@ -90,19 +105,19 @@ input, button > span {
   padding: 1em 1.3em;
 }
 button {
-  background: #645bff;
+  background: #189ad3;
   color: #fff;
   border: 10;
 }
 button:hover {
-  background-color: #CBC3E3;
+  background-color: #1E3F66;
 }
 
 /* Footer */
 footer {
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 25pxpx;
   background-color: #A7C7E7;
   color: #333;
   font-size: 16px;
@@ -118,4 +133,25 @@ footer {
 .col-md-4, .col-sm-6 {
   padding: 0 15px;
   flex: 1;
+}
+
+/* Fade in sections when scrolling */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Banner Section Styling */
+.banner-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
 }

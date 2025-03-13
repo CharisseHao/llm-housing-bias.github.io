@@ -6,27 +6,40 @@
     top: 0;
     z-index: 1000;
   }
+  #menu-toggle .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='grey' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
   
   /* Full-screen banner */
   .full-screen-banner {
-    background: url("../images/banner_index.jpg") center center no-repeat;
+    background: url("../images/banner_index.jpg") center bottom no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-position: center calc(100% + 35px); /* move image down*/
+    height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* padding-top: 15vh; Moves content down to approximately 1/3 */
     align-items: center;
     position: relative;
-    color: black;
+    color: #333;
+    margin-bottom: 80px; 
   }
+
+  img.banner-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* or object-fit: contain; */
+  }
+
   .full-screen-banner::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 1;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.1);
+    height: 50%;
+    /* background: rgba(0,0,0,0.1); */
     z-index: 1;
   }
   .full-screen-banner h1,
@@ -36,11 +49,23 @@
   }
   .full-screen-banner h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    /* margin-bottom: 15px; */
   }
   .full-screen-banner input[type="text"] {
     max-width: 400px;
     margin-top: 70px;
+  }
+
+  /* Fade image */
+  .full-screen-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; /* Adjust fade height */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none; /* Ensures it doesn't interfere with interactions */
   }
   
   /* Button container on the index page */
@@ -48,6 +73,22 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: -50px;
   }
   
+  .full-screen-banner .button-container button {
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    background-color: #189bd3b0; /* desired background color */
+    border-color: #189bd3b0;     /* desired border color */
+    color: #fff;
+    padding: 0.35em 0.6em;
+  }
+
+  .full-screen-banner .button-container button:hover {
+    background-color: #1e3e6689; /* hover state: a slightly darker shade */
+    border-color: #189bd3b0;
+    color: #fff;
+  }
