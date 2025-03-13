@@ -1,0 +1,26 @@
+<div class="section-content fade-in">
+    <link rel="stylesheet" href="static/css/common.css">
+
+    <h2>Methods</h2>
+    <br>
+    <h3> Models </h3>
+    <p>We analyzed seven LLMs: Google’s Gemma-2-2B-IT, OpenAI’s GPT-3.5-Turbo-0125, GPT-4o-2024-08-06, GPT-4o-Mini-2024-07-18, InceptionAI’s Jais-Family-1P3B-Chat, Meta’s Meta-Llama-3-8B-Instruct, and Microsoft’s Phi-3-mini-4k-instruct. These models were selected for their ability to generate responses without outright refusals, ensuring a sufficient dataset.
+    </p>
+    <br>
+
+    <h3> Prompt Design </h3>
+    <p>
+        Prompt engineering began by systematically generating thousands of prompts using a bulk generator script, varying occupation, living status, and name to assess biases in LLM responses. Testing multiple variables at once enabled intersectional analysis of tenant evaluation outcomes.
+
+    </p>
+    <p>
+Each prompt instructed LLMs to return only a numerical score (0-100) without explanations, ensuring consistency for statistical testing and simulating real-world tenant scoring systems (Desai 2024). Batchwizard was used to submit prompts to OpenAI models, while Runpod processed other models. The response files were then downloaded, cleaned, and validated to confirm data quality before analysis.
+    </p>
+
+
+    <h3>Statistical Techniques</h3>
+    <p> 
+    Since the data didn’t meet parametric assumptions (per Shapiro-Wilk and Levene’s tests), we applied the Kruskal-Wallis test to identify differences across demographic groups. Significant results were further examined with Dunn’s test using Bonferroni correction for multiple comparisons.
+    </p>
+    
+  </div>
