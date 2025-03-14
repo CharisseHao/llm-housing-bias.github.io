@@ -2,39 +2,58 @@
 
 /* Team member card styles */
 .our-team {
-    border: 1px solid #dedede;
-    text-align: center;
+    display: flex;
+    align-items: top;
+    text-align: left;
     overflow: hidden;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
+    gap: 15px; /* Space between image and text */
+    padding-bottom: 20px;
   }
-  .our-team:hover {
+  /* .our-team:hover {
     background: #189ad3;
     color: #fff;
-  }
+  } */
   .our-team .pic {
+    flex: 0 0 auto; /* Fix image width */
+    border: 1px solid #dedede;
+    border-radius: 20px; /* Round corners */
     position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 125px;
+    height: 125px;
   }
   .our-team .pic img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
     transition: all 0.3s ease;
+    object-fit: cover;
   }
-  .our-team:hover .pic img {
-    transform: translateY(-20px);
+  .our-team .pic:hover img {
+    /* transform: translateY(-20px); */
+    background: #189bd3b0;
+    color: #fff;
   }
   .our-team .social {
-    width: 20%;
+    width:20%;
     height: 100%;
-    background: #189ad3;
-    padding: 20px 0;
+    background: #189bd3b0;
+    padding: 0;
     margin: 0;
     list-style: none;
     position: absolute;
     top: 0;
     left: -50%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
     transition: all 0.5s ease;
   }
-  .our-team:hover .social {
+  .our-team .pic:hover .social {
     left: 0;
   }
   .our-team .social li {
@@ -49,24 +68,76 @@
   }
   .our-team .social li a:hover {
     color: black;
+    text-decoration: none;
   }
   .our-team .team-content {
-    padding: 25px 0;
+    flex: 1;
+    padding: 10px 0;
   }
   .our-team .title {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: -3px;
+    /* letter-spacing: 1px; */
+    /* text-transform: uppercase; */
+    /* margin: 0 0 10px 0; */
   }
   .our-team .post {
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: 150;
+    /* margin-top: -8px; */
+  }
+  .our-team .contribution{
+    font-size: 12.5px;
+    font-weight: 350;
+    text-align: justify;
   }
   .special-picture img {
     max-width: 100%;
     height: auto;
     display: block;
     padding: 20px 0;
+  }
+  
+  .row {
+    display: flex;
+    gap: 25px; /* Adjust as needed */
+    margin-bottom: 5px;
+  }
+
+
+  /* Full-screen banner */
+  .full-screen-banner {
+    background: url("../images/showcase.jpeg") center bottom no-repeat;
+    background-size: cover;
+    /* background-position: center calc(100% + 35px); move image down */
+    background-position: center;
+    /* height: 55vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-top: 15vh; Moves content down to approximately 1/3 */
+    align-items: center;
+    position: relative;
+    color: #333;
+    /* margin-bottom: 80px;  */
+  }
+
+  img.banner-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* or object-fit: contain; */
+  }
+
+  /* Fade image */
+  .full-screen-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 125%; /* Adjust fade height */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none; /* Ensures it doesn't interfere with interactions */
   }
   

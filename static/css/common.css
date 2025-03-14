@@ -14,6 +14,7 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 body {
   /* font-family: 'Oxygen', sans-serif; */
@@ -37,32 +38,35 @@ h2, h3, h4, p {
   text-align: left;
   gap: 10px;
 }
-h1, h2 {
-  font-family: 'Oxygen', serif;
-  font-weight: 700;
-  /* text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; */
+h1 {
+  font-family: 'Rubik', serif;
+  font-weight: 550;
+}
+h2 {
+  font-family: 'Rubik', serif;
+  font-weight: 450;
 }
 h3, h4 {
-  font-family: 'Oxygen', serif;
-  font-weight: 400;
+  font-family: 'Rubik', serif;
+  font-weight: 300;
 }
 h5 {
-  font-family: 'Oxygen', serif;
+  font-family: 'Rubik', serif;
   font-weight: 200;
   font-size: 17px; 
   margin-bottom: 4px; /* Reduce spacing between h5 elements */
 }
 .oxygen-light {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 300;
+  font-family: "Rubik", sans-serif;
+  font-weight: 200;
 }
 .oxygen-regular {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
 }
 .oxygen-bold {
-  font-family: "Oxygen", sans-serif;
-  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
 
 /* Utility classes */
