@@ -45,16 +45,42 @@ h1 {
 h2 {
   font-family: 'Rubik', serif;
   font-weight: 450;
+  margin-top: 20px;
+  margin-bottom: 1px;
 }
 h3, h4 {
   font-family: 'Rubik', serif;
-  font-weight: 300;
+  font-size: 23px; 
+  font-weight: 400;
+  margin-top: 2px;
+  margin-bottom: 1px;
 }
 h5 {
   font-family: 'Rubik', serif;
   font-weight: 200;
   font-size: 17px; 
   margin-bottom: 4px; /* Reduce spacing between h5 elements */
+}
+abstract{
+  /* font-family: 'Rubik', serif; */
+  font-weight: 200; 
+  color: rgb(95, 95, 95)
+}
+p {
+  font-weight: 325;
+}
+.variable_h {
+  font-weight: 425;
+  font-size: 18px;
+  margin-top: -10px;
+  margin-bottom: 1px;
+}
+.variable_p {
+  /* display: block; */
+  font-weight: 325;
+  font-size: 14px;
+  /* margin-top: -10px; */
+  margin-bottom: 1px;
 }
 .oxygen-light {
   font-family: "Rubik", sans-serif;
@@ -73,9 +99,9 @@ h5 {
 .custom-section {
   margin: 20px;
 }
-.custom-section h2 {
+/* .custom-section h2 {
   margin-bottom: 20px;
-}
+} */
 .content-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;

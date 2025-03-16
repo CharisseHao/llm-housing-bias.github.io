@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
       $("#results .container").load("sections/results.html", function() { setupFadeInObserver(); });
       $("#conclusion .container").load("sections/conclusion.html", function() { setupFadeInObserver(); });
       $("#differences .container").load("sections/differences.html", function() { setupFadeInObserver(); });
-  
   });
 //   $(document).ready(function(){
 //     const sections = ["intro", "methods", "prompts", "apps", "team", "results", "conclusion", "differences"];
