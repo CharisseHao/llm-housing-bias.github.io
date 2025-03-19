@@ -22,11 +22,20 @@ body {
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 400;
-  text-align: left;
+  text-align: justify;
   gap: 10px;
 }
 img {
   width: 100%;
+  /* text-align: center; */
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Typography */
@@ -34,8 +43,12 @@ h1 {
   text-align: center;
   gap: 20px;
 }
-h2, h3, h4, p {
+h2, h3, h4 {
   text-align: left;
+  gap: 10px;
+}
+p {
+  text-align: justify;
   gap: 10px;
 }
 h1 {
@@ -63,24 +76,20 @@ h5 {
 }
 abstract{
   /* font-family: 'Rubik', serif; */
-  font-weight: 200; 
+  font-weight: 175; 
   color: rgb(95, 95, 95)
 }
 p {
   font-weight: 325;
 }
+.result_title {
+  font-size: 19px;
+}
 .variable_h {
   font-weight: 425;
-  font-size: 18px;
+  font-size: 19px;
   margin-top: -10px;
-  margin-bottom: 1px;
-}
-.variable_p {
-  /* display: block; */
-  font-weight: 325;
-  font-size: 14px;
-  /* margin-top: -10px; */
-  margin-bottom: 1px;
+  margin-bottom: 10px;
 }
 .oxygen-light {
   font-family: "Rubik", sans-serif;
@@ -93,6 +102,13 @@ p {
 .oxygen-bold {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+}
+ul.variable_p {
+  /* display: block; */
+  font-weight: 325;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 15px;
 }
 
 /* Utility classes */
