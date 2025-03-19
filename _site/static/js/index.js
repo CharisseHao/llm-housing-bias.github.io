@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
       $("#apps .container").load("sections/apps.html", function() { setupFadeInObserver(); });
       $("#about_team .container").load("sections/about_team.html", function() { setupFadeInObserver(); });
       $("#results .container").load("sections/results.html", function() { setupFadeInObserver(); });
+      $("#p1_results .container").load("sections/p1_results.html", function() { setupFadeInObserver(); });
+      $("#p2_results .container").load("sections/p2_results.html", function() { setupFadeInObserver(); });
       $("#conclusion .container").load("sections/conclusion.html", function() { setupFadeInObserver(); });
       $("#differences .container").load("sections/differences.html", function() { setupFadeInObserver(); });
   });
